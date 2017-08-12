@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorGray"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wdharmana.kejarfood.MainActivity"
+    tools:showIn="@layout/activity_main">
+    
+    <LinearLayout
+        android:weightSum="2"
+        android:id="@+id/llBar"
+        android:background="@color/colorWhite"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_weight="0.7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="10sp"
+                android:textColor="#AAAAAA"
+                android:text="Total Belanja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:textSize="24sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:text="0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:textColor="@color/colorWhite"
+                android:text="PESAN"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_above="@id/llBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:text="Nama Pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:inputType="textPersonName"
+                android:id="@+id/edtName"
+                android:layout_marginTop="4dp"
+                android:padding="8dp"
+                android:background="@color/colorWhite"
+                android:hint="Masukkan Nama Pesanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <!-- Start Rate -->
+                <LinearLayout
+                    android:layout_weight="1.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Harga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/edtPrice"
+                        android:inputType="numberSigned"
+                        android:layout_marginTop="4dp"
+                        android:padding="8dp"
+                        android:background="@color/colorWhite"
+                        android:hint="Harga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    
+                </LinearLayout>
+                <!-- End Rate -->
+
+                <!-- Start Qty -->
+                <LinearLayout
+                    android:paddingLeft="16dp"
+                    android:layout_weight="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Jumlah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:weightSum="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btnMin"
+                            android:text="-"
+                            android:layout_weight="0.35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+                        <TextView
+                            android:textSize="24sp"
+                            android:id="@+id/txtQty"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:layout_weight="0.3"
+                            android:inputType="numberSigned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <Button
+                            android:id="@+id/btnPlus"
+                            android:text="+"
+                            android:layout_weight="0.35"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- End Qty -->
+                
+                
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddCart"
+                android:textColor="@color/colorWhite"
+                android:text="TAMBAHKAN"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnEmpty"
+                android:text="KOSONGKAN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:layout_marginTop="16dp"
+                android:textStyle="bold"
+                android:text="DAFTAR PESANAN ANDA:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

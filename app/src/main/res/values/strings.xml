@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">KejarFood</string>
+    <string name="action_settings">Settings</string>
+    <string name="order_text">Selamat! Pesanan anda berhasil diproses. Semoga pesanan anda cepat sampai rumah. Jumlah pembayaran yang harus anda lakukan adalah sejumlah:</string>
+</resources>
